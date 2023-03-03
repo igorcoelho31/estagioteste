@@ -6,11 +6,30 @@
     position: relative;
 }
 
+
+.lupa{
+  background-color: transparent;
+  position: relative;
+  padding-bottom: 35px;
+}
+
+
+.containerfooter{
+  background-color: Honeydew;
+  position: relative;
+  top: -20px;
+}
+
 .slide {
     display: none;
     position: absolute;
     width: 100%;
     height: 100%;
+}
+
+.footer{
+  position: relative;
+  top:-20px
 }
 
 .slide img {
@@ -23,14 +42,12 @@
     display: block;
 }
 
-
-
-
 ion-slide {
    position: relative;
    
 
 }
+
 
 ion-slide h1, ion-slide p {
     position: absolute;
@@ -46,42 +63,23 @@ ion-slide h1, ion-slide p {
     color: #fff;
 }
 
-@media (max-width: 600px){
-
-#pic1{
-  display: none;
-}
-
-#pic2{
-  display:none;
-}
-
-#pic3{
-  display:none;
-
-}
-
-
-#pic6{
-  position: relative;
-  right: -80px ;
+@media (max-width: 600px) {
   
-}
+  #ft-1{
+    display: relative;
+    right:100% ;
+  }
 
-.containerfooter{
- position: relative;
- top: -17px;
-background-color: Honeydew;
-}
+  #ft-3{
+    display: relative;
+   
+  }
 
-.footer{
-  position: relative;
-  top: -20px;
-  
-}
+  #ft-2{
+    display: none;
+  }
+  }
 
-
-} 
 @media screen and (max-width: 767px) {
    ion-slide h1 {
        font-size: 18px;
@@ -90,7 +88,7 @@ background-color: Honeydew;
        left: 30%;
     }
 
-   
+    
    
  }
 
@@ -119,25 +117,80 @@ ion-slide button {
 @media (max-width: 767px) {
     ion-slide button   {
       width: 25%;
-      font-size: 95%;
+      font-size: 80%;
       position: absolute;
-      top: 41%;
-      left: 13%;
-      padding: 15px;
-        border-radius: 25px;
-        width: 130px;
+      top: 40%;
+      left: 11%;
+      padding: 10px;
+        border-radius: 15px;
+        width: 100px;
     }
  }
 
 
 
+.header-header {
+    align-items: flex-end;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    padding-right: 30px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #2B571A;
+}
 
+.header-header-min {
+ background-color: #2B571A;
+ padding-left: 150px;
+}
+
+
+@media screen and (max-width: 700px){
+   .label-header {
+        padding-top: 10px;
+        padding-right: 500px;
+        padding-left: 100px;
+        color: #fff;
+        z-index: 10;
+    }
+}
+
+
+.label-header {
+    padding-right: 100px;
+    padding-left: 100px;
+    color: #fff;
+    z-index: 10;
+}
+
+.header {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.search-min-header{
+  max-width: 10%; 
+  left: 320px;
+  top: 15px;
+}
+
+
+.logoion{
+  padding: 20px;
+  position: absolute;
+  left: 250px;
+  top: 5px;
+}
 
 .logo {
     align-items: center;
     justify-content: center;
     display: flex;
-  
     margin: auto;
 }
 
@@ -149,58 +202,6 @@ ion-input {
     min-width: 300px;
     max-width: 400px;
 }
-
-
-///////// PACOTE FOOTER & HEADER /////////////////
-/// 
-/// 
-
-
-
-.header-header {
-  align-items: flex-end;
-  justify-content: flex-end;
-  display: flex;
-  flex-direction: row;
-  padding-right: 30px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: #2B571A;
-}
-
-.header-header-min {
-background-color: #2B571A;
-padding-left: 150px;
-}
-
-
-@media screen and (max-width: 700px){
- .label-header {
-      padding-top: 10px;
-      padding-right: 500px;
-      padding-left: 100px;
-      color: #fff;
-      z-index: 10;
-  }
-}
-
-
-.label-header {
-  padding-right: 10px;
-  padding-left: 10px;
-  color: #fff;
-  z-index: 10;
-}
-
-.header {
-  padding: 18px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-
 
 
 .menu-footer {
@@ -487,7 +488,7 @@ padding-left: 150px;
   
 
   @media (max-width: 768px) {
-    .header.hide-header { //esconder a header
+    .header { //esconder a header
       display: none;
     }
     .show-dropdown {
@@ -685,7 +686,6 @@ a {
     padding-top: 50px;
     padding-left: 10px;
     font-size: 40px;
-
   }
 
   @media screen and (min-width: 700px) {
@@ -830,6 +830,15 @@ a {
 
   //
 
+  //escondendo o menu-footer
+  
+  @media only screen and (max-width: 700px) {
+    .menu-footer {
+      display: none;
+    }
+  }
+
+  //
 
   .new-social-icons {
     width: 65%;
@@ -878,8 +887,10 @@ a {
   .crescer {
     width: 3500%;
     height: 3500%;
+    
     animation-name: crescer;
     animation-duration: 5s;
+    
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     ;//animation-direction: alternate;

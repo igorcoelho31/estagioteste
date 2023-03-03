@@ -1,6 +1,7 @@
 
-import { HttpClient } from '@angular/common/http';
-import { Component, HostListener, OnInit } from '@angular/core';
+
+
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NavController } from '@ionic/angular';
@@ -21,13 +22,11 @@ export class SignupPage implements OnInit {
     private router: Router,
     private formBuilder: FormBuilder,
     private usuarioService: UsuarioService,
-    public navCtrl: NavController, 
-    private http: HttpClient
+    public navCtrl: NavController
 
 
     ) {}
 
-  
   goToPage(option: string) {
     switch (option) {
       case 'option1':
@@ -59,15 +58,6 @@ openExternalLinkYouTube(){
 
 ngOnInit(): void{
   this.validaForm();
-
-this.http.get('assets/buscarcep.js', { responseType: 'text'})
-.subscribe(js => {
-  const script = document.createElement('script');
-  script.type = 'text/javascript';
-  script.text = js;
-  document.body.appendChild(script);
-});
-
 }
 
 
@@ -159,14 +149,5 @@ cadastro(): void{
   error: (e) => console.error(e)
   });
 }
-
-@HostListener('input', ['$event'])
-onInput(event: Event) {
-  const input = event.target as HTMLInputElement;
-  if (input.value === '0') {
-    this.usuario.cpfcnpj = null;
-  }
-}
-
 
 }

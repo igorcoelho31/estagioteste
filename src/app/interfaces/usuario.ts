@@ -4,17 +4,17 @@ export interface Usuario {
     
     bday: any;
     genre: string;
-    cpfcnpj: number | null;
-    phonenumber: number | null;
-    homenumber: number | null;
-    cep: number | null;
+    cpfcnpj: number;
+    phonenumber: number;
+    homenumber: number;
+    cep: number;
     address: string;
-    number: number | null;
+    number: number;
     city: string;
     nhood: string;
     state: string;
     province: string;
-    email: string;
-    usuario: string;
-    senha: string;   
+        email: string;
+        usuario: string;
+        senha: string;   
 }
